@@ -5,13 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(0, 0, 0);
+  background-color: #111;
 }
 *, ::before, ::after{
   box-sizing: border-box;//Lorsque box-sizing est défini sur "border-box", la largeur et la hauteur d'un élément incluent le contenu, la bordure et le rembourrage, mais pas la marge. 
   margin: 0;
   padding: 0;
   outline:none;
+}
+
+h1, p{
+  margin-bottom: 1rem;
 }
 button{
   background: none;

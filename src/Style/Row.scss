@@ -1,0 +1,29 @@
+.row {
+  padding: 1rem 4%;
+  color: #fff;
+
+  &_title {
+    font-size: 1.7rem;
+    padding: 0 0.5rem;
+  }
+
+  &_images {
+    display: flex;
+    align-items: center;
+    overflow-x: visible;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  ::-webkit-scrollbar {
+    appearance: none;
+    background-color: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: black;
+    border-radius: 9px;
+    border: 3px solid transparent;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+}

@@ -17,8 +17,6 @@ const Nav = () => {
   };
   document.addEventListener("scroll", transitionNav);
 
-  console.log(navBlack);
-
   const handleClick = () => {
     toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
   };
