@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(0, 0, 0);
+}
+*, ::before, ::after{
+  box-sizing: border-box;//Lorsque box-sizing est défini sur "border-box", la largeur et la hauteur d'un élément incluent le contenu, la bordure et le rembourrage, mais pas la marge. 
+  margin: 0;
+  padding: 0;
+  outline:none;
+}
+button{
+  background: none;
+  border: none;
+ 
+}
+.test{
+  width: 100%;
+  height: 50vh;
+}
