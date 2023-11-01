@@ -4,9 +4,16 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import axios from "axios";
 import requests from "../config/Request";
+import QuickView from "./QuickView";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
+  const [popup, setPopup] = useState(false);
+
+  function handelClickPopup() {
+    popup ? setPopup(false) : setPopup(true);
+  }
 
   useEffect(() => {
     axios
@@ -30,7 +37,7 @@ const Banner = () => {
   }
 
   const bannerStyle = {
-    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
+    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
   };
@@ -46,16 +53,24 @@ const Banner = () => {
           {truncateText(movie?.overview, 100)}
         </p>
         <div className="banner_buttons">
-          <button className="banner_button banner_button--play ">
-            <PlayArrowIcon />
-            Lecture
-          </button>
-          <button className="banner_button">
+          <Link to={`/video/${movie?.id}`}>
+            <button className="banner_button banner_button--play ">
+              <PlayArrowIcon />
+              Lecture
+            </button>
+          </Link>
+          <button className="banner_button" onClick={handelClickPopup}>
             <HelpOutlineIcon />
             plus d'info
           </button>
         </div>
       </div>
+      <QuickView
+        bannerStyle={bannerStyle}
+        movie={movie}
+        popup={handelClickPopup}
+        popupStatut={popup}
+      />
     </header>
   );
 };

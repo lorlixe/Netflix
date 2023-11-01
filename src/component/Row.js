@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Style/Row.scss";
 import axios from "axios";
 import Card from "../component/Card";
+import { Link } from "react-router-dom";
 
 const Row = ({ title, fetchUrl, isPoster }) => {
   const [movie, setMovie] = useState([]);
@@ -22,17 +23,21 @@ const Row = ({ title, fetchUrl, isPoster }) => {
       <div className="row_images">
         {movie?.map((movieCard) =>
           isPoster ? (
-            <Card
-              img={movieCard.poster_path}
-              info={movieCard}
-              key={movieCard.id}
-            />
+            <Link to={`/video/${movieCard?.id}`} key={movieCard.id}>
+              <Card
+                img={movieCard.poster_path}
+                info={movieCard}
+                key={movieCard.id}
+              />
+            </Link>
           ) : (
-            <Card
-              img={movieCard.backdrop_path}
-              info={movieCard}
-              key={movieCard.id}
-            />
+            <Link to={`/video/${movieCard?.id}`} key={movieCard.id}>
+              <Card
+                img={movieCard.backdrop_path}
+                info={movieCard}
+                key={movieCard.id}
+              />
+            </Link>
           )
         )}
       </div>

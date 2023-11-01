@@ -4,6 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [navBlack, setNavBlack] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -33,7 +34,9 @@ const Nav = () => {
       <button className="nav_burger" onClick={handleClick}>
         <MenuIcon />
       </button>
-      <img src="./images/logo.png" className="nav_logo" alt="Netflix"></img>
+      <Link to="/">
+        <img src="./images/logo.png" className="nav_logo" alt="Netflix"></img>
+      </Link>
       <nav className="nav_links">
         <a href="/" className="nav_link">
           Accueil
