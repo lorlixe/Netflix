@@ -61,7 +61,7 @@ const Banner = () => {
           </Link>
           <button className="banner_button" onClick={handelClickPopup}>
             <HelpOutlineIcon />
-            plus d'info
+            Plus d'info
           </button>
         </div>
       </div>

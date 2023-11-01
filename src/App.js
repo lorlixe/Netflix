@@ -34,7 +34,7 @@ function HomeComponent() {
     <div>
       <Banner />
       <Row
-        title="Programe Originaux Netflix"
+        title="Programes Originaux Netflix"
         fetchUrl={requests.fetchNetflixOriginals}
         isPoster={true}
       />
