@@ -8,10 +8,15 @@
   padding-bottom: 3rem;
   background-color: rgb(74, 74, 74);
   color: white;
+
   @media screen and (min-width: 768px) {
     font-size: 1.2rem;
     height: 80vh;
     padding-bottom: 7rem;
+  }
+
+  @media screen and (max-width: 372px) {
+    width: 23.5rem;
   }
   &_content {
     width: 60vh;
@@ -42,17 +47,18 @@
         cursor: pointer;
         &:hover {
           transform: scale(1.1);
-      }
+        }
         @media screen and (min-width: 768px) {
           font-size: 1.2rem;
           padding: 0.8rem 1.5rem;
         }
+
         &--play {
           background-color: rgba(255, 255, 255, 0.7);
           color: #111;
         }
-        svg{
-            margin-right: 0.5rem;
+        svg {
+          margin-right: 0.5rem;
         }
       }
     }

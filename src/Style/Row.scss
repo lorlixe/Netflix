@@ -1,6 +1,9 @@
 .row {
   padding: 1rem 4%;
   color: #fff;
+  @media screen and (max-width: 372px) {
+    width: 23.5rem;
+  }
 
   &_title {
     font-size: 1.7rem;
