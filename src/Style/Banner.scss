@@ -15,11 +15,7 @@
     padding-bottom: 7rem;
   }
 
-  @media screen and (max-width: 372px) {
-    width: 23.5rem;
-  }
   &_content {
-    width: 60vh;
     padding: 8vh 4% 0 4%;
     @media screen and (min-width: 768px) {
       padding-top: 40vh;
